@@ -1,0 +1,1580 @@
+/* 
+    1.学习如何制作导航条最后一个不要线
+    li:not(:last-child)::after
+    2.学习如何循环平面动画
+*/
+.top-bar-wrapper {
+  width: auto;
+  background-color: #e3e4e5;
+  border-bottom: 1px solid #ddd;
+}
+.top-bar a,
+.top-right li span {
+  color: #999;
+  line-height: 30px;
+  font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB,
+    "\5B8B\4F53", sans-serif;
+}
+.top-right a:hover {
+  color: #f10215;
+}
+
+.top-bar {
+  background-color: #e3e4e5;
+  height: 30px;
+  line-height: 30px;
+}
+.top-left,
+.top-bar li {
+  float: left;
+}
+.top-left {
+  position: relative;
+}
+.top-left .location {
+  position: relative;
+  z-index: 999;
+}
+.top-bar .location a {
+  display: block;
+  width: 42px;
+  padding: 0 7px;
+  line-height: 30px;
+  border: 1px solid transparent;
+  border-bottom: none;
+  height: 31px;
+}
+.top-bar .location a:hover {
+  color: #f10215;
+}
+.top-left:hover .location a {
+  background-color: #fff;
+  height: 31px;
+  border: 1px solid #d8d9d9;
+  border-bottom: none;
+}
+.top-left .location {
+  display: block;
+}
+
+.top-left .menu {
+  display: none;
+  width: 300px;
+  border: 1px solid #d8d9d9;
+  background-color: #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  z-index: 99;
+  top: 30px;
+  padding: 10px;
+  padding-bottom: 25px;
+}
+.menu-info {
+  padding-bottom: 25px;
+  border-bottom: 1px dashed rgb(204, 204, 204);
+}
+.menu .item {
+  float: left;
+  height: 28px;
+  width: 60px;
+  padding: 2px 0;
+}
+
+.menu .item a {
+  /* border: 1px red solid; */
+  display: inline-block;
+  height: 24px;
+  /* width: 40px; */
+  padding: 0 8px;
+  line-height: 24px;
+}
+.menu .item a:hover {
+  color: #f10215;
+  background-color: #f4f4f4;
+}
+.menu .one a {
+  background-color: #f10215;
+  color: #fff;
+}
+.top-left:hover .menu {
+  display: block;
+}
+.top-left i {
+  color: #f10215;
+  font-size: 14px;
+  margin-right: 2px;
+}
+.top-right {
+  float: right;
+}
+.top-right i {
+  color: #999999;
+  font-size: 12px;
+}
+.top-right .right-line {
+  float: left;
+  width: 1px;
+  height: 10px;
+  background-color: rgb(204, 204, 204);
+  margin: 12px 12px;
+}
+
+.top-right .font {
+  color: #f10215;
+}
+
+.top-right div {
+  float: left;
+}
+.top .myjd {
+  position: absolute;
+}
+.top-right .jd {
+  width: 70px;
+  height: 31px;
+  padding-left: 8px;
+  border: 1px solid transparent;
+  border-bottom: none;
+  position: relative;
+  z-index: 999;
+  line-height: 27px;
+}
+.myjd:hover .jd {
+  background-color: #fff;
+  border: 1px solid #d8d9d9;
+  border-bottom: none;
+}
+.myjd .myjd-info {
+  display: none;
+  position: absolute;
+  z-index: 99;
+  top: 30px;
+  width: 200px;
+  height: 160px;
+  background-color: #fff;
+  border: 1px solid #d8d9d9;
+}
+.myjd .myjd-info div {
+  font-size: 14px;
+  color: #999;
+  margin: 8px 10px;
+}
+.myjd:hover .myjd-info {
+  display: block;
+}
+.top .mykehu {
+  position: absolute;
+}
+.top-right .kehu {
+  width: 70px;
+  height: 31px;
+  padding-left: 8px;
+  border: 1px solid transparent;
+  border-bottom: none;
+  position: relative;
+  z-index: 999;
+  line-height: 27px;
+}
+.mykehu:hover .kehu {
+  background-color: #fff;
+  border: 1px solid #d8d9d9;
+  border-bottom: none;
+}
+.mykehu .mykehu-info {
+  display: none;
+  position: absolute;
+  z-index: 99;
+  top: 30px;
+  width: 170px;
+  height: 160px;
+  background-color: #fff;
+  border: 1px solid #d8d9d9;
+}
+.mykehu .mykehu-info div {
+  font-size: 14px;
+  color: #999;
+  margin: 8px 10px;
+}
+.mykehu:hover .mykehu-info {
+  display: block;
+}
+.myqiye {
+  position: relative;
+}
+.myqiye .qiye {
+  line-height: 27px;
+  position: relative;
+  z-index: 999;
+  width: 70px;
+  height: 30px;
+  padding-left: 8px;
+  border: 1px solid transparent;
+  border-bottom: none;
+}
+.myqiye:hover .qiye {
+  background-color: #fff;
+  border: 1px solid #d8d9d9;
+  border-bottom: none;
+}
+.qiye-info {
+  display: none;
+  position: absolute;
+  z-index: 99;
+  top: 30px;
+  left: 0;
+  width: 154px;
+  height: 140px;
+  background-color: #fff;
+  border: 1px solid #d8d9d9;
+}
+.qiye-info div {
+  font-size: 14px;
+  color: #999;
+  margin: 5px 10px;
+}
+.myqiye:hover .qiye-info {
+  display: block;
+}
+.iphone {
+  position: relative;
+  /* border: 1px solid; */
+}
+.down-img {
+  position: absolute;
+  z-index: 9;
+  margin: 5px auto;
+  left: -10px;
+  float: left;
+  width: 60px;
+  height: 60px;
+  background-color: #f6f6f6;
+  padding: 7px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.iphone .line {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  border: 6px solid #fff;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  bottom: -2px;
+  width: 0;
+  left: 20px;
+}
+.iphone:hover .line {
+  display: block;
+}
+.iphone .ma {
+  display: none;
+  box-sizing: border-box;
+  padding-top: 15px;
+  padding-left: 5px;
+  position: absolute;
+  z-index: 99;
+  top: 30px;
+  /* left: 0; */
+  right: -14px;
+  width: 190px;
+  height: 100px;
+  background-color: #fff;
+  border: 1px solid #d8d9d9;
+}
+.iphone:hover .ma {
+  display: block;
+}
+.ma-img {
+  width: 70px;
+  height: 7px;
+}
+.iphone .ma img {
+  width: 70px;
+}
+.iphone-info {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+}
+.iphone-info span {
+  display: block;
+}
+.iphone-info span:nth-child(1) {
+  color: #333;
+  font-weight: bold;
+}
+.iphone-info span:nth-child(2) {
+  color: #f10215;
+}
+.nav-wrapper {
+  width: auto;
+  height: 140px;
+  border-bottom: 1px solid rgb(221, 221, 221);
+}
+.nav {
+  height: 140px;
+  position: relative;
+}
+.nav .logo {
+  float: left;
+  top: 10px;
+  width: 190px;
+  height: 120px;
+  overflow: hidden;
+}
+.nav .logo a {
+  margin-top: 10px;
+  position: absolute;
+  text-indent: -999px;
+  z-index: 9;
+  display: block;
+  width: 190px;
+  height: 120px;
+  left: 0;
+  /* border: 1px solid red; */
+  background-image: url(../img/sprite.png);
+  background-position: 0 0;
+  transition: 1s;
+}
+.nav .logo .lo-img:hover {
+  height: 0px;
+}
+.nav .logo .logo-img {
+  /* display: none; */
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 134px;
+  height: 120px;
+  /* border: 1px black solid; */
+  margin: 0 28px;
+  background-image: url(../img/18490bf08654ba09.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.search {
+  /* border: 1px solid; */
+  padding: 26px;
+  float: left;
+  position: relative;
+}
+.search form {
+  float: left;
+}
+
+.search-logo {
+  float: left;
+  position: relative;
+  height: 38px;
+  border: 1px solid #f10215;
+}
+.search-logo span {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  font-size: 12px;
+  color: #999;
+}
+.search-logo form > i {
+  position: absolute;
+  top: 10px;
+  right: 80px;
+  font-size: 16px;
+  color: #999;
+}
+.search input {
+  float: left;
+  width: 430px;
+  height: 36px;
+  border: 1px solid #f10215;
+  outline: none;
+}
+.search .search input:focus {
+  border-color: #f10215;
+}
+.search button {
+  float: left;
+  padding: 0;
+  box-sizing: border-box;
+  width: 58px;
+  height: 38px;
+  border: 1px solid #f10215;
+  background-color: #f10215;
+}
+.search button i {
+  font-size: 20px;
+  color: #fff;
+}
+.shop-wrapper {
+  float: left;
+}
+.shop-wrapper .shop {
+  margin-left: 20px;
+  width: 132px;
+  height: 36px;
+  border: 1px solid rgb(238, 238, 238);
+  line-height: 31px;
+}
+.shop i {
+  margin: 0 10px 0 15px;
+}
+.shop a {
+  font-size: 14px;
+  color: #f10215;
+}
+.shop:hover {
+  border-color: #f10215;
+}
+.middle {
+  position: absolute;
+  top: 65px;
+  width: 600px;
+  /* border: 1px solid red; */
+}
+.middle li {
+  margin-top: 9px;
+  float: left;
+  margin-right: 10px;
+  font-size: 12px;
+}
+.middle li a {
+  color: #999;
+}
+.middle .font-one,
+.middle li a:hover {
+  color: #e1251b;
+}
+.bottom {
+  position: absolute;
+  bottom: 10px;
+  left: 275px;
+}
+.bottom li {
+  float: left;
+  margin-right: 24px;
+}
+.bottom li a {
+  font-size: 15px;
+  color: #333;
+}
+.bottom li a:hover {
+  color: #c81623;
+}
+.bottom .font-two {
+  color: #e1251b;
+  font-weight: bold;
+}
+.bottom .font-two:hover {
+  color: #c81623;
+}
+.banner-wrapper {
+  background-color: rgb(244, 244, 244);
+}
+.banner-wrapper .banner {
+  margin-top: 10px;
+}
+.banner-wrapper .banner-left {
+  padding: 10px 0px;
+  float: left;
+  margin-right: 10px;
+  width: 190px;
+  height: 450px;
+  background-color: #fff;
+}
+.banner-nav li {
+  /* border: 1px solid; */
+  padding-left: 18px;
+}
+.banner-nav li a {
+  color: #333;
+  font-size: 14px;
+  line-height: 25px;
+}
+.banner-nav li:hover {
+  background-color: rgb(217, 217, 217);
+}
+.banner li a:hover {
+  color: #c81623;
+}
+.banner span {
+  color: rgb(139, 139, 139);
+  margin: 0 1px;
+}
+.banner-wrapper .banner-middle-left {
+  position: relative;
+  /* border: 1px solid red; */
+  float: left;
+  margin-right: 10px;
+  width: 590px;
+  height: 470px;
+  background-color: #fff;
+  overflow: hidden;
+}
+#outer {
+  width: 590px;
+  position: relative;
+  overflow: hidden;
+}
+#imgList {
+  position: absolute;
+}
+.banner-img {
+  position: relative;
+}
+.banner-img li {
+  position: absolute;
+  z-index: 8;
+}
+.banner-img img {
+  width: 100%;
+}
+.banner-circle {
+  position: absolute;
+  z-index: 999;
+  bottom: 18px;
+  left: 30px;
+}
+.banner-circle .circle {
+  float: left;
+  width: 9px;
+  height: 9px;
+  margin-right: 1px;
+  border-radius: 50%;
+  background-clip: content-box;
+  /* border: 1px solid rgba(0, 0, 0, .5); */
+  border: 3px solid transparent;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.banner-circle .circle:hover,
+.banner-circle a:first-child {
+  background-color: rgb(254, 254, 254);
+  border: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.banner-button .left-button {
+  position: absolute;
+  z-index: 999;
+  width: 25px;
+  height: 35px;
+  background-color: rgba(0, 0, 0, 0.15);
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transition: background 0.3s ease;
+}
+.banner-button .right-button {
+  position: absolute;
+  z-index: 999;
+  width: 25px;
+  height: 35px;
+  background-color: rgba(0, 0, 0, 0.15);
+  border-top-left-radius: 18px;
+  border-bottom-left-radius: 18px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.banner-button .left-button:hover,
+.banner-button .right-button:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.banner-button .left-button i {
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.banner-button .right-button i {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.banner-right-img a {
+  display: block;
+  width: 190px;
+  height: 150px;
+}
+.banner-wrapper .banner-middle-right {
+  float: left;
+  margin-right: 10px;
+  width: 190px;
+  height: 470px;
+  background-color: #fff;
+  /* border: 1px solid; */
+  position: relative;
+}
+.banner-right-img img {
+  width: 100%;
+}
+.banner-right-img .right-img {
+  margin: 10px 0;
+}
+.left-img-button {
+  /* display: none; */
+  position: absolute;
+  z-index: 999;
+  width: 25px;
+  height: 35px;
+  background-color: transparent;
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transition: 0.3s ease background, color;
+}
+.left-img-button i {
+  position: absolute;
+  cursor: pointer;
+  left: 5px;
+  top: 10px;
+  font-size: 12px;
+  color: transparent;
+}
+.right-img-button {
+  position: absolute;
+  z-index: 999;
+  width: 25px;
+  height: 35px;
+  background-color: transparent;
+  border-top-left-radius: 18px;
+  border-bottom-left-radius: 18px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transition: background 0.3s ease;
+}
+.right-img-button i {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  font-size: 12px;
+  color: transparent;
+}
+/* 鼠标移入父元素大框，显示按钮背景颜色 */
+.banner-middle-right:hover .left-img-button,
+.banner-middle-right:hover .right-img-button {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+/* 鼠标移入按钮元素，按钮元素变色 */
+.banner-middle-right div .left-img-button:hover,
+.banner-middle-right div .right-img-button:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+/* 鼠标移入元素大框，显示图标字体颜色
+    不能和显示按钮背景颜色放在一起，不然图标会有背景色
+*/
+.banner-middle-right:hover .left-img-button i,
+.banner-middle-right:hover .right-img-button i {
+  color: rgba(255, 255, 255, 0.8);
+}
+.banner-wrapper .banner-right {
+  float: left;
+  width: 190px;
+  height: 470px;
+  background-color: rgb(253, 253, 253);
+  /* border: 1px solid; */
+}
+.banner-right .J_user {
+  /* border: 1px solid; */
+  position: relative;
+  width: 190px;
+  height: 102px;
+}
+.user-new {
+  width: 190px;
+  height: 67px;
+}
+.user-new .user-img {
+  position: absolute;
+  top: 13px;
+  left: 20px;
+  width: 44px;
+  height: 44px;
+  overflow: hidden;
+  border: 2px solid rgb(255, 255, 255);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-image: url(../img/user.png);
+  background-size: cover;
+}
+.user-font {
+  position: absolute;
+  top: 16px;
+  left: 80px;
+  right: 10px;
+  width: 106px;
+  height: 38px;
+}
+
+.user-new .user-one {
+  display: block;
+  margin-bottom: 5px;
+  color: #666;
+  font-size: 12px;
+}
+.user-new .user-two,
+.user-new .user-three,
+.user-new .user-four {
+  color: #333;
+  font-size: 12px;
+}
+.user-new .user-one:hover,
+.user-new .user-two:hover,
+.user-new .user-four:hover {
+  color: #c81623;
+}
+.user-button {
+  position: absolute;
+  /* border: 1px solid; */
+  width: 149px;
+  height: 35px;
+  bottom: 0px;
+  left: 20px;
+  border-bottom: 1px solid rgb(239, 239, 239);
+}
+.user-left-button a,
+.user-right-button a {
+  display: block;
+  float: left;
+  width: 72px;
+  height: 25px;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 13px;
+  font-size: 12px;
+}
+.user-left-button a {
+  background-color: #e1251b;
+  color: #fff;
+  margin-right: 5px;
+}
+.user-right-button a {
+  background-color: #363634;
+  color: #e5d790;
+}
+.user-right-button a:hover {
+  background-color: #e1251b;
+  color: #fff;
+}
+.banner-right .news {
+  width: 190px;
+  height: 130px;
+}
+.news-top {
+  width: 190px;
+  height: 20px;
+  padding-top: 12px;
+  margin-bottom: 5px;
+}
+.news-top h5 {
+  float: left;
+  margin-right: 70px;
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+  margin-left: 15px;
+}
+.news-top a {
+  display: block;
+  float: left;
+  color: #999;
+  font-size: 12px;
+}
+.news-top a:hover {
+  color: #c81623;
+}
+.news-top i {
+  margin-left: 5px;
+}
+.news-top a:hover {
+  color: #c81623;
+}
+.news-content {
+  width: 160px;
+  height: 98px;
+  margin: 0 15px;
+  border-bottom: 1px solid rgb(239, 239, 239);
+}
+.news-content .content li {
+  margin-bottom: 6px;
+  width: 170px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: rgb(102, 102, 102);
+}
+.news-content .content span {
+  display: inline-block;
+  width: 35px;
+  height: 16px;
+  background-color: rgba(225, 37, 27, 0.08);
+  color: #e1251b;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  margin-right: 6px;
+}
+.content a {
+  font-size: 12px;
+  color: #666;
+}
+
+.banner-right .J_service {
+  width: 190px;
+  height: 238px;
+  position: relative;
+  padding-top: 10px;
+}
+.service li {
+  float: left;
+  text-align: center;
+}
+.service li a {
+  display: block;
+  padding-top: 8px;
+  display: inline-block;
+  width: 63px;
+  height: 45px;
+  font-size: 12px;
+  color: #333;
+  /* border: 1px solid; */
+}
+.J_service .service li a:hover i,
+.J_service .service li a:hover span {
+  color: #c81623;
+}
+.J_service .service li i {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 22px;
+  color: pink;
+}
+.J_service .service li .fa-plane {
+  color: rgba(112, 194, 207, 0.423);
+}
+.J_service .service li .fa-hotel {
+  color: rgba(117, 147, 80, 0.423);
+}
+.J_service .service li .fa-ghost {
+  color: rgba(80, 144, 147, 0.423);
+}
+.J_service .service li .fa-charging-station {
+  color: rgba(98, 139, 192, 0.423);
+}
+.J_service .service li .fa-address-card {
+  color: rgba(183, 140, 214, 0.423);
+}
+.J_service .service li .fa-heart {
+  color: rgba(248, 54, 6, 0.423);
+}
+.J_service .service li .fa-money-bill-wave {
+  color: #e5d790;
+}
+.J_service .service li .fa-file {
+  color: rgba(105, 119, 89, 0.837);
+}
+.J_service .service li .fa-file-alt {
+  color: rgba(124, 230, 168, 0.423);
+}
+.J_service .service li .fa-city {
+  color: rgba(98, 68, 205, 0.423);
+}
+.J_service .service li .fa-address-book {
+  color: rgba(202, 76, 128, 0.423);
+}
+.app-wrapper {
+  background-color: rgb(244, 244, 244);
+  padding-top: 30px;
+  /* height: 1000px; */
+}
+.app-wrapper .app {
+  height: 260px;
+  /* border: 1px solid red; */
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+.app .app-left {
+  /* background-color: #2f3430; */
+  background: url(../img/jd.png);
+  float: left;
+  width: 190px;
+  height: 260px;
+  overflow: hidden;
+  position: relative;
+}
+.app-left h2 {
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  margin-top: 50px;
+  font-size: 25px;
+}
+
+.app-left .countdown-desc {
+  width: 190px;
+  height: 30px;
+  position: absolute;
+  top: 160px;
+  left: 0;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  color: white;
+}
+.app-left .countdown-desc > span {
+  font-size: 18px;
+  margin-right: 2px;
+  font-weight: bold;
+}
+
+.hour,
+.minute,
+.second {
+  position: absolute;
+  top: 200px;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  line-height: 30px;
+  width: 30px;
+  height: 30px;
+  background: black;
+}
+.h_m,
+.m_s {
+  font-size: 20px;
+  font-weight: 900;
+  position: absolute;
+  bottom: 32px;
+  color: white;
+}
+
+.hour {
+  left: 22px;
+}
+
+.h_m {
+  left: 62px;
+}
+
+.minute {
+  left: 78px;
+}
+
+.m_s {
+  right: 62px;
+}
+.second {
+  left: 138px;
+}
+
+.app-clock {
+  margin-left: 33px;
+  margin-top: 16px;
+  line-height: 27px;
+}
+.app-left .app-clock .app-one,
+.app-left .app-clock .app-two,
+.app-clock .app-three {
+  float: left;
+  width: 30px;
+  height: 30px;
+  background-color: #2f3430;
+  text-align: center;
+  line-height: 30px;
+  font-size: 20px;
+}
+.app-clock span {
+  float: left;
+  margin: 0 8px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.app .app-middle {
+  float: left;
+  width: 800px;
+  height: 260px;
+  position: relative;
+  /* border: 1px solid; */
+}
+
+.app-button .app-button-left {
+  position: absolute;
+  z-index: 999;
+  width: 25px;
+  height: 35px;
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+  background-color: rgba(0, 0, 0, 0.15);
+  transition: background 0.2s;
+  /* border: 1px solid; */
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.app-button .app-button-left:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.app-button .app-button-left i {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+  top: 10px;
+  left: 4px;
+}
+
+.app-button .app-button-right {
+  position: absolute;
+  z-index: 999;
+  width: 25px;
+  height: 35px;
+  border-top-left-radius: 18px;
+  border-bottom-left-radius: 18px;
+  background-color: rgba(0, 0, 0, 0.15);
+  transition: background 0.2s;
+  /* border: 1px solid; */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.app-button .app-button-right:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.app-button .app-button-right i {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+  top: 10px;
+  right: 4px;
+}
+.app-middle a {
+  float: left;
+  display: block;
+  width: 200px;
+  height: 260px;
+}
+.app-middle-one {
+  float: left;
+  width: 200px;
+  height: 260px;
+  position: relative;
+}
+.app-middle a::after {
+  position: absolute;
+  z-index: 9;
+  top: 30px;
+  left: 200px;
+  content: "";
+  width: 1px;
+  height: 200px;
+  background: linear-gradient(180deg, white, #eeeeee, white);
+}
+.app-middle a:hover .app-middle-font {
+  color: #c81623;
+}
+
+.app-middle-img {
+  width: 140px;
+  height: 140px;
+  /* border: 1px solid; */
+  padding: 30px 32px 0;
+  background-color: #fff;
+  transition: 0.3s;
+}
+
+.app-middle-img img {
+  vertical-align: top;
+  width: 100%;
+}
+.app-middle a:hover img {
+  background-color: #fff;
+  opacity: 0.8;
+}
+.app-middle-font {
+  width: 160px;
+  height: 18px;
+  line-height: 18px;
+  margin: 13px 22px 0;
+  color: #333;
+  font-size: 12px;
+  /* border: 1px solid; */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.app-middle-price {
+  width: 160px;
+  height: 24px;
+  margin: 7px 22px 0;
+  font-size: 12px;
+  color: #e1251b;
+  text-align: center;
+  line-height: 22px;
+  font-weight: bold;
+}
+
+.app .app-right:hover .app-right-img {
+  background-color: #fff;
+  opacity: 0.8;
+}
+
+.app-right-info .app-right-img {
+  width: 120px;
+  height: 120px;
+  margin: 30px 25px 0;
+  background-color: #fff;
+}
+.app-right-info .app-right-img img {
+  width: 100%;
+}
+.app-item-info {
+  width: 170px;
+  height: 90px;
+  margin-top: 10px;
+  /* border: 1px solid; */
+  text-align: center;
+  line-height: 1.5;
+}
+.app-item-info .item-info-title {
+  color: #666;
+  font-size: 14px;
+}
+.app-item-info .item-info-promo {
+  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+}
+.app-item-info .item-info-action {
+  color: #e1251b;
+  box-sizing: border-box;
+  border: 1px solid #e1251b;
+  border-radius: 14px;
+  width: 82px;
+  height: 24px;
+  line-height: 20px;
+  padding-left: 4px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  display: inline-block;
+}
+.app-item-info .item-info-action i {
+  font-size: 12px;
+}
+
+.app-right-container,
+.app .app-left-container,
+.app .app-middle-container {
+  position: absolute;
+  width: 180px;
+  height: 250px;
+  margin: 0 10px;
+  left: 0;
+  background: linear-gradient(180deg, #fff 150px, rgb(238, 240, 246));
+}
+.app .app-left-container {
+  left: 180px;
+}
+.app .app-middle-container {
+  left: 360px;
+}
+.app .app-right {
+  float: left;
+  width: 200px;
+  height: 260px;
+  position: relative;
+  overflow: hidden;
+  /* animation: left-run infinite 3s linear; */
+}
+.app-wrapper .app-right .app-run {
+  position: relative;
+  z-index: 999;
+  width: 200px;
+  height: 260px;
+  /* left: 0; */
+  animation: left-run infinite 3s linear;
+}
+@keyframes left-run {
+  0% {
+    left: 0px;
+  }
+  25% {
+    left: -180px;
+  }
+  50% {
+    left: -180px;
+  }
+  75% {
+    left: -360px;
+  }
+  100% {
+    left: -360px;
+  }
+  /* 设置循环，不停顿 */
+  /* 0%{
+        left: 0;
+    }
+    100%{
+        left: -360px;
+    } */
+}
+/* 
+    循环动画方法：
+    1.设置子元素，第一个和最后一个相同，避免循环时跳转很明显
+        前后一样就不会出现这种情况
+    2.给包裹最外层的父元素设置overflow：hidden（相当于给div）
+    3.给包裹的第二层的父元素设置动画（相当于给ul）
+    4.可以设置0~100不停循环
+    5.也可以每次都设置停顿效果，就是如果三张图片
+        只需要设置中间两次停顿，（假设共5张图片，只需要设置四次停顿100% / 8 算出每次用时的百分比 （共九次。第一次开始，四次到达图片的位置，四次到达图片时停顿的时间））
+        用100% / 4次（两次到达，两次停顿）（还有第一次从0开始，相当于要设置五次） 假设一次循环我用时10s
+        5次：第一次从0%开始
+            第一次转到第二次的位置 25%（2.5s到达第二张图片的位置，设置好第二张图片的位置）
+            第二次转到第三次时是停顿第二张图片的时间 50%（2.5s已经到达，从2.5s开始一直到5s时停顿在第二章图片的位置，图片位置不变）
+            第三次转到第四次时的位置 75%（除去前面用时50%,从5s-7.5s是到达第三张图片的时间）
+            第四次转到第五次时是停顿第三张图片的时间 100%（在7.5s已经在第三张图片，从7.5~10s是停顿在第三张图片的时间）
+            
+
+
+*/
+.elevator-wrapper {
+  width: 58px;
+  /* height: 348px; */
+  position: absolute;
+  z-index: 99;
+  background-color: #fff;
+  top: 682px;
+  right: 50%;
+  margin-right: -703px;
+}
+
+.elevator-wrapper li a {
+  display: inline-block;
+  position: relative;
+  z-index: 99;
+  text-align: center;
+  width: 38px;
+  height: 38px;
+  /* border: 1px solid; */
+  padding: 10px;
+  color: #333;
+  font-size: 14px;
+  line-height: 19px;
+}
+.elevator-wrapper li.top{
+  display: none;
+}
+.elevator-wrapper li.top a{
+  color: red;
+}
+/* 去除第一个元素，其余都显示 */
+.elevator-list > li:not(:nth-child(1))::after {
+  position: absolute;
+  content: "";
+  width: 33px;
+  height: 1px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: linear-gradient(170deg, #fff, rgb(238, 238, 238), #fff);
+}
+
+.elevator-wrapper li a:hover {
+  background-color: #c81623;
+  color: #fff;
+}
+.elevator-wrapper li i {
+  display: block;
+  font-size: 16px;
+}
+.JD_container-wrapper {
+  background-color: rgb(244, 244, 244);
+}
+.JD_container {
+  height: 260px;
+  /* border: 1px solid; */
+}
+.container-left {
+  position: relative;
+  float: left;
+  width: 190px;
+  height: 260px;
+}
+.container-left a {
+  position: relative;
+  float: left;
+  display: block;
+  width: 190px;
+  height: 260px;
+}
+.container-left img {
+  width: 100%;
+}
+.con-left-goods {
+  position: absolute;
+  float: left;
+  z-index: 99;
+  width: 140px;
+  height: 24px;
+  top: 15px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.con-left-font {
+  position: absolute;
+  z-index: 999;
+  top: 50px;
+  left: 20px;
+  bottom: 10px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.con-left-font i {
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.container-right li {
+  float: left;
+}
+.container-scroll li a {
+  float: left;
+  display: block;
+  width: 198px;
+  height: 260px;
+}
+.scroll-one,
+.scroll-two {
+  position: relative;
+}
+.scroll-img {
+  margin: 20px auto;
+  width: 150px;
+}
+.container-scroll li img {
+  width: 100%;
+}
+.scroll-one .bottom {
+  width: 210px;
+  height: 20px;
+  position: absolute;
+  text-align: center;
+  bottom: 50px;
+  left: 0;
+}
+.scroll-img-two {
+  margin: auto;
+  margin-top: 90px;
+  width: 150px;
+}
+.scroll-two .bottom {
+  width: 210px;
+  height: 20px;
+  position: absolute;
+  text-align: center;
+  top: 50px;
+  left: 0;
+}
+
+.container-right {
+  position: relative;
+  float: left;
+  margin-left: 10px;
+  width: 990px;
+  height: 260px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.container-right:hover .container-scroll {
+  animation-play-state: paused;
+}
+.container-scroll {
+  position: absolute;
+  z-index: 999;
+  /* 指定宽度很宽，使元素不会被挤下去 */
+  width: 10000px;
+  height: 260px;
+  animation: scroll infinite 10s linear;
+}
+/* 假设 设置显示宽度为800px，就要最后一组显示与第一组相同为800px一样的元素 
+    避免循环跳转有问题
+    最后设置动画的元素宽度要指定很宽
+*/
+@keyframes scroll {
+  0% {
+    left: 0;
+  }
+  /* 写1980意思是 当10s时，1980px像素已经在最前面的顶端
+        显示最后一组相同的元素，然后发生跳转，不会很明显
+    */
+  100% {
+    left: -1980px;
+  }
+}
+.container-warpper {
+  /* height: 1000px; */
+  background-color: #f5f5f5;
+  padding-top: 26px;
+  margin-left: -20px;
+}
+.container-img {
+  /* width: 1189px; */
+  height: 120px;
+}
+.container-img img {
+  width: 100%;
+  height: 100%;
+}
+.container .box-hd {
+  margin-top: 12px;
+  width: 1190px;
+  margin-left: 10px;
+  height: 58px;
+  /* background-color: red; */
+  line-height: 58px;
+}
+.box-hd .title {
+  float: left;
+  font-size: 22px;
+  font-weight: 200;
+  color: #333;
+}
+.box-hd .more {
+  float: right;
+  font-size: 16px;
+}
+.box-hd .more a {
+  /* display: block;
+    width: 90px;
+    height: auto; */
+  /* background-color: #cfccca; */
+  color: #424242;
+}
+.box-hd .more i {
+  color: #b0b0b0;
+  font-size: 19px;
+  margin-left: 2px;
+}
+.box-hd .more a:hover i,
+.box-hd .more a:hover {
+  color: #ff6700;
+}
+
+.row {
+  z-index: 99;
+  width: 1240px;
+  height: 628px;
+  /* background-color: #000; */
+}
+.row .span4 {
+  float: left;
+  width: 234px;
+  height: 614px;
+  background-color: #fff;
+}
+.span4 img {
+  width: 100%;
+}
+.span4:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-top: -2px;
+}
+.span16 {
+  /* background-color: #000; */
+  margin-left: 14px;
+  width: 1190px;
+  height: 628px;
+  float: left;
+}
+.span16 li {
+  padding: 20px 0;
+  float: left;
+  width: 225px;
+  height: 260px;
+  margin-right: 14px;
+  margin-bottom: 14px;
+  background-color: #fff;
+  transition: all 0.3s;
+}
+.span16 .d {
+  margin-left: 0;
+  margin-right: 0;
+}
+.span16 img {
+  width: 160px;
+  padding: 0 37px;
+
+  /* background-color: #000; */
+}
+.span16 h3 {
+  margin: 10px 10px 10px;
+  color: #333;
+  font-size: 15px;
+  font-weight: 400;
+  text-align: center;
+}
+.span16 .desc {
+  font-size: 14px;
+  color: #b0b0b0;
+  /* background-color: red; */
+  text-align: center;
+  margin-bottom: 10px;
+}
+.span16 .price {
+  font-size: 14px;
+  text-align: center;
+}
+.span16 .num {
+  color: #ff6700;
+  margin-right: 2px;
+}
+.span16 .nu {
+  color: #b0b0b0;
+  text-decoration: line-through;
+}
+.span16 li:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-top: -2px;
+}
+.bottom-font {
+  margin-top: 20px;
+  margin-bottom: 100px;
+  width: 1190px;
+  background-color: #2f3430;
+}
+.bottom-font ul li {
+  float: left;
+  margin: 10px 42px;
+}
+.bottom-font span {
+  color: #444;
+  display: inline-block;
+  height: 45px;
+  margin-top: 13px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.bottom-font ul li .img {
+  display: block;
+  float: left;
+  overflow: hidden;
+  width: 45px;
+}

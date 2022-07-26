@@ -1,0 +1,641 @@
+@charset "utf-8";
+.top-bar-wrapper{
+    width: auto;
+    background-color: #E3E4E5;
+    border-bottom: 1px solid #ddd;
+    
+}
+.top-bar a,
+.top-right li span{
+    color: #999;
+    line-height: 30px;
+    font: 12px/1.5 Microsoft YaHei,Heiti SC,tahoma,arial,Hiragino Sans GB,"\5B8B\4F53",sans-serif;
+}
+.top-right a:hover{
+    color: #F10215;
+}
+
+.top-bar{
+    background-color: #E3E4E5;
+    height: 30px;
+    line-height: 30px;
+    
+}
+.top-left,
+.top-bar li{
+    float: left;
+}
+.top-left{
+    position: relative;
+}
+.top-left .location{
+    position: relative;
+    z-index: 999;
+}
+.top-bar .location a{
+    display: block;
+    width: 42px;
+    padding: 0 7px;
+    line-height: 30px;
+    border: 1px solid transparent;
+    border-bottom:none ;
+    height: 31px;
+
+}
+.top-bar .location a:hover{
+    color:#F10215;
+}
+.top-left:hover .location a{
+    background-color:#fff;
+    height: 31px;
+    border: 1px solid #D8D9D9;
+    border-bottom:none ;
+}
+.top-left .location{
+    display: block;
+}
+
+.top-left .menu{
+    display: none;
+    width: 300px;
+    border: 1px solid #D8D9D9;
+    background-color: #fff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    z-index: 99;
+    top: 30px;
+    padding: 10px;
+    padding-bottom: 25px;
+}
+.menu-info{
+    padding-bottom: 25px;
+    border-bottom: 1px dashed rgb(204, 204,204);
+}
+.menu .item{
+    float: left;
+    height: 28px;
+    width: 60px;
+    padding: 2px 0;
+}
+
+.menu .item a{
+    /* border: 1px red solid; */
+    display: inline-block;
+    height: 24px;
+    /* width: 40px; */
+    padding:0 8px;
+    line-height: 24px;
+}
+.menu .item a:hover{
+    color: #F10215;
+    background-color: #f4f4f4;
+}
+.menu .one a{
+    background-color: #F10215;
+    color: #fff;
+}
+.top-left:hover .menu{
+    display: block;
+}
+.top-left i{
+    color:#F10215 ;
+    font-size: 14px;
+    margin-right: 2px;
+}
+.top-right{
+    float: right;
+}
+.top-right i{
+    color: #999999;
+    font-size: 12px;
+}
+.top-right .right-line{
+    float: left;
+    width: 1px;
+    height: 10px;
+    background-color:rgb(204, 204,204);
+    margin: 12px 12px;
+}
+
+.top-right .font {
+    color:#F10215 ;
+}
+
+.top-right div{
+    float: left;
+}
+.top  .myjd{
+    position: absolute;
+}
+.top-right .jd {
+    width: 70px;
+    height: 31px;
+    padding-left: 8px;
+    border: 1px solid transparent;
+    border-bottom: none;
+    position: relative;
+    z-index: 999;
+    line-height: 27px;
+}
+.myjd:hover .jd{
+    background-color: #fff;
+    border: 1px solid #D8D9D9;
+    border-bottom: none;
+}
+.myjd .myjd-info{
+    display: none;
+    position: absolute;
+    z-index: 99;
+    top: 30px;
+    width: 200px;
+    height: 160px;
+    background-color:#fff;
+    border: 1px solid #D8D9D9;
+}
+.myjd .myjd-info div{
+    font-size: 14px;
+    color: #999;
+    margin:8px 10px;
+    
+}
+.myjd:hover .myjd-info{
+    display: block;
+}
+.top  .mykehu{
+    position: absolute;
+}
+.top-right .kehu {
+    width: 70px;
+    height: 31px;
+    padding-left: 8px;
+    border: 1px solid transparent;
+    border-bottom: none;
+    position: relative;
+    z-index: 999;
+    line-height: 27px;
+}
+.mykehu:hover .kehu{
+    background-color: #fff;
+    border: 1px solid #D8D9D9;
+    border-bottom: none;
+}
+.mykehu .mykehu-info{
+    display: none;
+    position: absolute;
+    z-index: 99;
+    top: 30px;
+    width: 170px;
+    height: 160px;
+    background-color:#fff;
+    border: 1px solid #D8D9D9;
+}
+.mykehu .mykehu-info div{
+    font-size: 14px;
+    color: #999;
+    margin:8px 10px;
+    
+}
+.mykehu:hover .mykehu-info{
+    display: block;
+}
+.myqiye{
+    position: relative;
+}
+.myqiye .qiye{
+    line-height: 27px;
+    position: relative;
+    z-index: 999;
+    width: 70px;
+    height: 30px;
+    padding-left: 8px;
+    border: 1px solid transparent;
+    border-bottom: none;
+}
+.myqiye:hover .qiye{
+    background-color: #fff;
+    border: 1px solid #D8D9D9;
+    border-bottom: none;
+}
+.qiye-info{
+    display: none;
+    position: absolute;
+    z-index: 99;
+    top: 30px;
+    left: 0;
+    width: 154px;
+    height: 140px;
+    background-color: #fff;
+    border: 1px solid #D8D9D9;
+}
+.qiye-info div{
+    font-size: 14px;
+    color: #999;
+    margin: 5px 10px;
+}
+.myqiye:hover .qiye-info{
+    display: block;
+}
+.iphone{
+    position: relative;
+    /* border: 1px solid; */
+}
+.down-img{
+    position: absolute;
+    z-index: 9;
+    margin: 5px auto;
+    left: -10px;
+    float: left;
+    width: 60px;
+    height: 60px;
+    background-color: #f6f6f6;
+    padding: 7px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.iphone .line{
+    display: none;
+    position: absolute;
+    z-index: 999;
+    border: 6px solid  #fff ;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    bottom: -2px;
+    width: 0;
+    left: 20px;  
+}
+.iphone:hover .line{
+    display: block;
+}
+.iphone .ma{
+    display: none;
+    box-sizing: border-box;
+    padding-top: 15px;
+    padding-left: 5px;
+    position: absolute;
+    z-index: 99;
+    top: 30px;
+    /* left: 0; */
+    right: -14px;
+    width: 190px; 
+    height: 100px;
+    background-color: #fff;
+    border: 1px solid #D8D9D9;
+
+}
+.iphone:hover .ma{
+    display: block;
+}
+.ma-img{
+    width: 70px;
+    height: 7px;
+}
+.iphone .ma img{
+    width: 70px;
+}
+.iphone-info{
+    position: absolute;
+    top: 30px;
+    right: 20px;
+}
+.iphone-info span{
+    display: block;
+    
+}
+.iphone-info span:nth-child(1){
+    color: #333;
+    font-weight: bold;
+}
+.iphone-info span:nth-child(2){
+    color: #F10215;
+}
+*{
+	margin: 0px;
+	padding: 0px;
+}
+#top{
+	height: auto;
+	width: 1903px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.nav{
+	width: 1130px;
+	height: 90px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.logo {
+	float: left;
+	width: 170px;
+	height: 60px;
+	margin-top: 20px;
+}
+.logo img{
+	width: 100%;
+}
+.nav-font{
+	margin-top: 50px;
+	margin-left: 20px;
+	float: left;
+	width: 110px;
+	height: 40px;
+}
+.nav-font img{
+	width: 100px;
+}
+.tp {
+	width: 50px;
+	height: 53px;
+	float: left;
+	margin-top: 21.5px;
+}
+.img {
+	border-radius: 3px;
+}
+#box {
+	width: 100%;
+	height: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.container{
+	/* border: 1px solid; */
+	width: 100%;
+	height: 570px;
+}
+.container #right{
+	float: left;
+	z-index: 99;
+	margin-left: -250px;
+	width:410px ;
+
+}
+.container .img{
+	float: left;
+	margin-left: 20%;
+	margin-top: 50px;
+	width: 990px;
+
+}
+
+#A {
+	background-color: #e93854;
+}
+
+#imd {
+	float: left;
+	width: 340px;
+	height: 588px;
+}
+#right {
+	float: left;
+	width: 410px;
+	height: 588px;
+}
+
+.zh {
+	width: 410px;
+	height: 524px;
+	margin-top: 36px;
+	background-color: #FFFFFF;
+}
+.nan {
+	width: 410px;
+	height: 247px;
+	float: left;
+	margin-top: 10px;
+}
+.dak {
+	width: 346px;
+	height: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+}
+.one {
+	color: #F36A3C;
+	font-family: "微软雅黑";
+
+	font-size: 14px;
+	float: left;
+}
+.two {
+	width: 64px;
+	height: 19px;
+	float: right;
+	font-family: "微软雅黑";
+	color: #8B8787;
+	font-size: 14px;
+	text-align: center;
+	list-style-type: none;
+}
+
+.x {
+	float: right;
+	color: #8B8787;
+	text-align: left;
+}
+
+.three {
+	width: 72px;
+	height: 19px;
+	float: right;
+	font-family: "微软雅黑";
+	color: #8B8787;
+	font-size: 14px;
+	text-align: right;
+	padding-right: 0px;
+	padding-bottom: 0px;
+}
+
+
+
+
+.tr {
+	width: 331px;
+	height: 48px;
+	border: 1px solid #E0E0E0;
+	color: #8B8787;
+	font-family: "微软雅黑";
+	line-height: 48px;
+	font-size: 14px;
+	padding-left: 15px;
+	margin-left: 30px;
+}
+.tt {
+	width: 331px;
+	height: 48px;
+	border: 1px solid #E0E0E0;
+	color: #8B8787;
+	font-family: "微软雅黑";
+	line-height: 48px;
+	font-size: 14px;
+	padding-left: 15px;
+	margin-left: 30px;
+}
+
+
+.naa {
+	width: 410px;
+	height: 82px;
+}
+.r {
+	height: 27px;
+	padding-top: 27.5px;
+}
+.e {
+	font-size: 24px;
+	width: 203px;
+	height: 27px;
+	float: left;
+	color: rgb(226, 28, 25);
+	font-family: "黑体";
+	text-align: center;
+}
+.kj {
+	width: 345px;
+	height: 50px;
+	background-color:  rgb(226, 28, 25);
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	color: #FFFFFF;
+	font-family: "黑体";
+	text-align: center;
+	line-height: 50px;
+}
+
+.kg {
+	width: 0px;
+	height: 14px;
+}
+
+.f {
+	width: 2px;
+	height: 27px;
+	float: left;
+	text-align: center;
+	background-color: #E0E0E0;
+}
+.g {
+	width: 204px;
+	height: 27px;
+	font-size: 24px;
+	float: left;
+	text-align: center;
+	color: #5B5B5B;
+	font-family: "黑体";
+}
+.g:hover {
+	color: #F36A3C;
+}
+.we {
+	width: 165px;
+	float: left;
+	text-align: center;
+	font-size: 35px;
+	margin-top: 13.5px;
+	color: #333333;
+	margin-left: 15px;
+	font-family: "微软雅黑";
+	font-weight: bold;
+}
+
+
+.frist {
+	height: 81px;
+	margin-top: 350px;
+	width: 348px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.z {
+	float: left;
+	font-family: "微软雅黑";
+	color: #989494;
+	font-size: 14px;
+	text-align: right;
+}
+.tb {
+	width: 410px;
+	height: 27px;
+	min-width: 0px;
+}
+.db {
+	height: 100px;
+}
+.jt {
+
+	color: #757575;
+	height: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 1000px;
+	margin-top: 30px;
+	font-size: 14px;
+
+}
+
+.c {
+	width: 80px;
+	height: 20px;
+	float: left;
+	color: #333333;
+	text-align: center;
+	border-right: 1px solid #757575;
+}
+.v {
+	width: 80px;
+	height: 20px;
+	float: left;
+		text-align: center;
+	border-right: 1px solid #757575;
+}
+.h {
+	width: 80px;
+	height: 20px;
+	float: left;
+	text-align: center;
+	border-right: 1px solid #757575;
+	font-size: 15px;
+}
+.wt {width: 80px;
+	height: 20px;
+	float: left;
+		text-align: center;
+	border-right: 1px solid #757575;
+}
+.ys {
+	width: 100px;
+	height: 20px;
+	float: left;
+    text-align: center;
+	
+}
+.c:hover {
+	color: #333333;
+}
+.v:hover {
+	color: #333333;
+}
+.wt:hover {
+	color: #333333;
+}
+.ys:hover {
+	color: #333333;
+}
+
+
+.h:hover {
+	color: #333333;
+}
+.uj {
+	color: #757575;
+	font-size: 15px;
+	width: 627px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	text-align: center;
+}
